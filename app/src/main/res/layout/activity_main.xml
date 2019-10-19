@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="#202124"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        android:layout_weight="1.5"
+        >
+
+        <Button
+            android:id="@+id/buttonStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="5dp"
+
+            android:layout_marginLeft="10dp"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:gravity="center"
+            android:text="Start"/>
+<!--            tools:layout_editor_absoluteX="38dp"-->
+<!--            tools:layout_editor_absoluteY="51dp" -->
+
+
+        <Button
+            android:id="@+id/viewMap"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:layout_marginTop="20dp"
+            android:text="View Map" />
+
+        <Button
+
+            android:id="@+id/buttonStop"
+            android:layout_marginRight="10dp"
+            android:gravity="center"
+            android:layout_marginTop="20dp"
+            android:layout_weight="1"
+            android:padding="5dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Stop"/>
+<!--            tools:layout_editor_absoluteX="266dp"-->
+<!--            tools:layout_editor_absoluteY="51dp" -->
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:id="@+id/fileNameLayout"
+        >
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_weight="2"
+            android:id="@+id/fileName"
+            android:padding="5dp"
+            android:textColor="#d5dede"
+            android:outlineSpotShadowColor="#d5dede"
+            android:background="@drawable/rounded_border_edittext"
+            android:textColorHint="#d5dede"
+            android:hint="Please Enter Name of CSV File"
+            android:singleLine="true"
+            android:layout_margin="5dp"/>
+
+        <Button
+            android:id="@+id/saveFile"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_margin="5dp"
+            android:layout_weight="8"
+            android:background="@drawable/buttons"
+            android:text="Save" />
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+
+        android:layout_weight="1"
+        android:id="@+id/lat"
+        android:layout_gravity="center"
+        android:gravity="center|left"
+        android:padding="15dp"
+        android:textColor="#d5dede"
+        android:textSize="15dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:text="Latitude: "
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="146dp" />
+
+    <TextView
+        android:layout_weight="1"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:id="@+id/lng"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:gravity="center|left"
+        android:padding="15dp"
+        android:textColor="#d5dede"
+        android:layout_marginTop="10dp"
+        android:textSize="15dp"
+        android:text="Longitude: "
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="175dp" />
+
+    <TextView
+        android:layout_weight="1"
+        android:id="@+id/speed"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:gravity="center|left"
+        android:padding="15dp"
+        android:textColor="#d5dede"
+        android:textSize="15dp"
+        android:text="Speed: "
+        tools:layout_editor_absoluteX="38dp"
+        tools:layout_editor_absoluteY="207dp" />
+
+
+<!--    <com.google.android.gms.maps.MapView-->
+<!--        android:id="@+id/map"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        android:layout_weight="5"-->
+<!--        android:visibility="visible" />-->
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="20dp"
+        android:layout_weight="5"
+        tools:context=".MainActivity" />
+</LinearLayout>
